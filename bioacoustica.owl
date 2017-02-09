@@ -12,8 +12,9 @@
      xmlns:terms1="http://rs.tdwg.org/dwc/terms/"
      xmlns:obo="http://purl.obolibrary.org/obo/">
     <owl:Ontology rdf:about="http://vocab.acousti.ca/bioacoustica">
-        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002005"/>
-        <rdfs:comment xml:lang="en">Ontology to describe the bioacoustic behaviours of animals.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Ontology to describe the bioacoustic behaviours of animals.
+
+For practical reasons vibrational communication via a substrate is included.</rdfs:comment>
     </owl:Ontology>
     
 
@@ -26,6 +27,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000115"/>
     
 
 
@@ -744,6 +751,30 @@
     
 
 
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasDbXref"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#hasOBONamespace"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#id"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
+
+    <owl:AnnotationProperty rdf:about="http://www.geneontology.org/formats/oboInOwl#inSubset"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -789,20 +820,20 @@
     
 
 
-    <!-- http://vocab.acousti.ca/bioacoustica#hasSoundProductionMethod -->
+    <!-- http://vocab.acousti.ca/bioacoustica#hasProductionMethod -->
 
-    <owl:ObjectProperty rdf:about="http://vocab.acousti.ca/bioacoustica#hasSoundProductionMethod">
+    <owl:ObjectProperty rdf:about="http://vocab.acousti.ca/bioacoustica#hasProductionMethod">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasSoundProductionMethod"/>
+                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasProductionMethod"/>
                 <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
             </owl:Restriction>
         </rdfs:domain>
         <rdfs:range>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasSoundProductionMethod"/>
+                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasProductionMethod"/>
                 <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#SoundProductionMethod"/>
             </owl:Restriction>
         </rdfs:range>
@@ -810,13 +841,13 @@
     
 
 
-    <!-- http://vocab.acousti.ca/bioacoustica#hasSoundPropagationMedium -->
+    <!-- http://vocab.acousti.ca/bioacoustica#hasPropagationMedium -->
 
-    <owl:ObjectProperty rdf:about="http://vocab.acousti.ca/bioacoustica#hasSoundPropagationMedium">
+    <owl:ObjectProperty rdf:about="http://vocab.acousti.ca/bioacoustica#hasPropagationMedium">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasSoundPropagationMedium"/>
+                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasPropagationMedium"/>
                 <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
             </owl:Restriction>
         </rdfs:domain>
@@ -880,6 +911,14 @@
     <!-- http://vocab.acousti.ca/bioacoustica#Call -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#Call"/>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#CommunicationDistance -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#CommunicationDistance">
+        <rdfs:comment>e.g. &quot;near-field&quot;</rdfs:comment>
+    </owl:Class>
     
 
 
@@ -1588,8 +1627,8 @@
         <terms:hasVersion rdf:resource="http://rs.tdwg.org/dwc/terms/history/#higherGeography-2014-10-23"/>
         <rdfs:label xml:lang="en">Higher Geography</rdfs:label>
         <rdfs:comment xml:lang="en">A list (concatenated and separated) of geographic names less specific than the information captured in the locality term.</rdfs:comment>
-        <attributes:abcdEquivalence>{DataSets/DataSet/Units/Unit/Gathering/LocalityText or DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName}</attributes:abcdEquivalence>
         <terms:modified>2014-10-23</terms:modified>
+        <attributes:abcdEquivalence>{DataSets/DataSet/Units/Unit/Gathering/LocalityText or DataSets/DataSet/Units/Unit/Gathering/NamedAreas/NamedArea/AreaName}</attributes:abcdEquivalence>
         <terms:description xml:lang="en">The recommended best practice is to separate the values with a vertical bar (&apos; | &apos;), with terms in order from least specific to most specific. Examples: &quot;North Atlantic Ocean&quot;, &quot;South America | Argentina | Patagonia | Parque Nacional Nahuel Huapi | Neuquén | Los Lagos&quot; with accompanying values &quot;South America&quot; in Continent, &quot;Argentina&quot; in Country, &quot;Neuquén&quot; in StateProvince, and &quot;Los Lagos&quot; in County.</terms:description>
         <attributes:status>recommended</attributes:status>
         <attributes:decision rdf:resource="http://rs.tdwg.org/dwc/terms/history/decisions/#Decision-2014-10-30_16"/>
