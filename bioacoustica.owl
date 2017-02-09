@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://labs.acousti.ca/ontologies/bioacoustica#"
-     xml:base="http://labs.acousti.ca/ontologies/bioacoustica"
+<rdf:RDF xmlns="http://vocab.acousti.ca/bioacoustica#"
+     xml:base="http://vocab.acousti.ca/bioacoustica"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:attributes="http://rs.tdwg.org/dwc/terms/attributes/"
      xmlns:terms1="http://rs.tdwg.org/dwc/terms/">
-    <owl:Ontology rdf:about="http://labs.acousti.ca/ontologies/bioacoustica">
+    <owl:Ontology rdf:about="http://vocab.acousti.ca/bioacoustica">
         <rdfs:comment xml:lang="en">Ontology to describe the bioacoustic behaviours of animals.</rdfs:comment>
     </owl:Ontology>
     
@@ -752,75 +752,75 @@
     
 
 
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#hasCallParticipants -->
+    <!-- http://vocab.acousti.ca/bioacoustica#hasCallParticipants -->
 
-    <owl:ObjectProperty rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#hasCallParticipants">
+    <owl:ObjectProperty rdf:about="http://vocab.acousti.ca/bioacoustica#hasCallParticipants">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#hasCallParticipants"/>
-                <owl:someValuesFrom rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#Call"/>
+                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasCallParticipants"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
             </owl:Restriction>
         </rdfs:domain>
         <rdfs:range>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#hasCallParticipants"/>
-                <owl:someValuesFrom rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#CallParticipants"/>
+                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasCallParticipants"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#CallParticipants"/>
             </owl:Restriction>
         </rdfs:range>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#hasCallType -->
+    <!-- http://vocab.acousti.ca/bioacoustica#hasCallType -->
 
-    <owl:ObjectProperty rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#hasCallType">
+    <owl:ObjectProperty rdf:about="http://vocab.acousti.ca/bioacoustica#hasCallType">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#hasCallType"/>
+                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasCallType"/>
                 <owl:someValuesFrom rdf:resource="http://rs.tdwg.org/dwc/terms/Taxon"/>
             </owl:Restriction>
         </rdfs:domain>
         <rdfs:range>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#hasCallType"/>
-                <owl:someValuesFrom rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#Call"/>
+                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasCallType"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
             </owl:Restriction>
         </rdfs:range>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#hasSoundProductionMethod -->
+    <!-- http://vocab.acousti.ca/bioacoustica#hasSoundProductionMethod -->
 
-    <owl:ObjectProperty rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#hasSoundProductionMethod">
+    <owl:ObjectProperty rdf:about="http://vocab.acousti.ca/bioacoustica#hasSoundProductionMethod">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#hasSoundProductionMethod"/>
-                <owl:someValuesFrom rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#Call"/>
+                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasSoundProductionMethod"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
             </owl:Restriction>
         </rdfs:domain>
         <rdfs:range>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#hasSoundProductionMethod"/>
-                <owl:someValuesFrom rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#SoundProductionMethod"/>
+                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasSoundProductionMethod"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#SoundProductionMethod"/>
             </owl:Restriction>
         </rdfs:range>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#hasSoundPropagationMedium -->
+    <!-- http://vocab.acousti.ca/bioacoustica#hasSoundPropagationMedium -->
 
-    <owl:ObjectProperty rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#hasSoundPropagationMedium">
+    <owl:ObjectProperty rdf:about="http://vocab.acousti.ca/bioacoustica#hasSoundPropagationMedium">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#hasSoundPropagationMedium"/>
-                <owl:someValuesFrom rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#Call"/>
+                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasSoundPropagationMedium"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
             </owl:Restriction>
         </rdfs:domain>
     </owl:ObjectProperty>
@@ -835,118 +835,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#AgressionCall -->
-
-    <owl:Class rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#AgressionCall">
-        <rdfs:subClassOf rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#Call"/>
-    </owl:Class>
-    
-
-
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#Air -->
-
-    <owl:Class rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#Air">
-        <rdfs:subClassOf rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#SoundPropagationMedium"/>
-    </owl:Class>
-    
-
-
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#Call -->
-
-    <owl:Class rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#Call"/>
-    
-
-
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#CallParticipants -->
-
-    <owl:Class rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#CallParticipants"/>
-    
-
-
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#Crepitation -->
-
-    <owl:Class rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#Crepitation">
-        <rdfs:subClassOf rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#SoundProductionMethod"/>
-    </owl:Class>
-    
-
-
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#Female -->
-
-    <owl:Class rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#Female">
-        <rdfs:subClassOf rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#CallParticipants"/>
-    </owl:Class>
-    
-
-
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#Male -->
-
-    <owl:Class rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#Male">
-        <rdfs:subClassOf rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#CallParticipants"/>
-    </owl:Class>
-    
-
-
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#Male-femaleDuet -->
-
-    <owl:Class rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#Male-femaleDuet">
-        <rdfs:subClassOf rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#CallParticipants"/>
-    </owl:Class>
-    
-
-
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#MatingCall -->
-
-    <owl:Class rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#MatingCall">
-        <rdfs:subClassOf rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#Call"/>
-    </owl:Class>
-    
-
-
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#SoundProductionMethod -->
-
-    <owl:Class rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#SoundProductionMethod"/>
-    
-
-
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#SoundPropagationMedium -->
-
-    <owl:Class rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#SoundPropagationMedium"/>
-    
-
-
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#Stridulation -->
-
-    <owl:Class rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#Stridulation">
-        <rdfs:subClassOf rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#SoundProductionMethod"/>
-    </owl:Class>
-    
-
-
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#Substrate -->
-
-    <owl:Class rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#Substrate">
-        <rdfs:subClassOf rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#SoundPropagationMedium"/>
-    </owl:Class>
-    
-
-
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#Vocalisation -->
-
-    <owl:Class rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#Vocalisation">
-        <rdfs:subClassOf rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#SoundProductionMethod"/>
-    </owl:Class>
-    
-
-
-    <!-- http://labs.acousti.ca/ontologies/bioacoustica#Water -->
-
-    <owl:Class rdf:about="http://labs.acousti.ca/ontologies/bioacoustica#Water">
-        <rdfs:subClassOf rdf:resource="http://labs.acousti.ca/ontologies/bioacoustica#SoundPropagationMedium"/>
-    </owl:Class>
     
 
 
@@ -965,6 +853,46 @@
         <rdfs:isDefinedBy rdf:resource="http://rs.tdwg.org/dwc/terms/"/>
         <rdfs:label xml:lang="en">Taxon</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#AdvertismentCall -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#AdvertismentCall">
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#AgressionCall -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#AgressionCall">
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#Call -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#Call"/>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#CallParticipants -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#CallParticipants"/>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#SoundProductionMethod -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#SoundProductionMethod"/>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#SoundPropagationMedium -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#SoundPropagationMedium"/>
     
 
 
