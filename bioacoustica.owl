@@ -96,7 +96,6 @@ For practical reasons vibrational communication via a substrate is included.</rd
     
 
 
- 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -249,7 +248,14 @@ For practical reasons vibrational communication via a substrate is included.</rd
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#TerritorialCall">
         <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
     </owl:Class>
-     
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#TimeOfDay -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#TimeOfDay">
+        <rdfs:comment>What time of day is the call made?</rdfs:comment>
+    </owl:Class>
 </rdf:RDF>
 
 
