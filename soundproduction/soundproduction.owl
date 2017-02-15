@@ -142,6 +142,14 @@
     
 
 
+    <!-- http://vocab.acousti.ca/soundproduction#Mandibular_Stridulation -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/soundproduction#Mandibular_Stridulation">
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/soundproduction#Stridulation"/>
+    </owl:Class>
+    
+
+
     <!-- http://vocab.acousti.ca/soundproduction#Maxillo-mandibular_Stridulation -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/soundproduction#Maxillo-mandibular_Stridulation">
@@ -207,6 +215,14 @@
     <!-- http://vocab.acousti.ca/soundproduction#Stridulation -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/soundproduction#Stridulation"/>
+    
+
+
+    <!-- http://vocab.acousti.ca/soundproduction#Strigilation -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/soundproduction#Strigilation">
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/soundproduction#Vibratory"/>
+    </owl:Class>
     
 
 

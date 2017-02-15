@@ -219,6 +219,20 @@ For practical reasons vibrational communication via a substrate is included.</rd
     
 
 
+    <!-- http://vocab.acousti.ca/bioacoustica#FrequencySpectrum -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#FrequencySpectrum">
+        <rdfs:comment>in KHz</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#HearingMechanism -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#HearingMechanism"/>
+    
+
+
     <!-- http://vocab.acousti.ca/bioacoustica#MaleFemaleDuet -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#MaleFemaleDuet">
@@ -255,6 +269,19 @@ For practical reasons vibrational communication via a substrate is included.</rd
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#TimeOfDay">
         <rdfs:comment>What time of day is the call made?</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#TimeOfHighestAcousticActivity -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#TimeOfHighestAcousticActivity">
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#TimeOfDay"/>
+        <rdfs:comment>e.g. 
+0900-1800
+Sunrise-1200
+Sunrise-sunset
+Sunrise-0900; 1800-sunset</rdfs:comment>
     </owl:Class>
 </rdf:RDF>
 
