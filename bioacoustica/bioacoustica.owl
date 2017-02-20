@@ -219,10 +219,26 @@ For practical reasons vibrational communication via a substrate is included.</rd
     
 
 
+    <!-- http://vocab.acousti.ca/bioacoustica#EchemeSpacing -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#EchemeSpacing">
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+    </owl:Class>
+    
+
+
     <!-- http://vocab.acousti.ca/bioacoustica#FrequencySpectrum -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#FrequencySpectrum">
         <rdfs:comment>in KHz</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#FrequencySpectrumPeakEnergy -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#FrequencySpectrumPeakEnergy">
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#FrequencySpectrum"/>
     </owl:Class>
     
 
@@ -233,11 +249,39 @@ For practical reasons vibrational communication via a substrate is included.</rd
     
 
 
+    <!-- http://vocab.acousti.ca/bioacoustica#HearingPeakSensitivity -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#HearingPeakSensitivity">
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#HearingMechanism"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#HearingRange -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#HearingRange"/>
+    
+
+
     <!-- http://vocab.acousti.ca/bioacoustica#MaleFemaleDuet -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#MaleFemaleDuet">
         <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
     </owl:Class>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#PeakFrequency -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#PeakFrequency">
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#FrequencySpectrum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#SongStructure -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
     
 
 
@@ -253,6 +297,22 @@ For practical reasons vibrational communication via a substrate is included.</rd
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#SoundPropagationMedium">
         <rdfs:comment xml:lang="en">The medium through which the sound is propagated (e.g. air, water, soil). Usually this can be a term from the Environment Ontology.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#SyllableSpacing -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#SyllableSpacing">
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#SyllablesPerEcheme -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#SyllablesPerEcheme">
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
     </owl:Class>
     
 

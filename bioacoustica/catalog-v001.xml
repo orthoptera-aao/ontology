@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1486733580451" name="http://vocab.acousti.ca/bioacoustica" uri="bioacoustica.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1487621171083" name="http://vocab.acousti.ca/bioacoustica" uri="bioacoustica.owl"/>
     </group>
 </catalog>
