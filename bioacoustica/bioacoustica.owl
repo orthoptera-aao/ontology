@@ -15,6 +15,7 @@
         <rdfs:comment xml:lang="en">Ontology to describe the bioacoustic behaviours of animals.
 
 For practical reasons vibrational communication via a substrate is included.</rdfs:comment>
+        <terms:title xml:lang="en">BioAcoustica Ontology</terms:title>
     </owl:Ontology>
     
 
@@ -262,6 +263,14 @@ For practical reasons vibrational communication via a substrate is included.</rd
     <!-- http://vocab.acousti.ca/bioacoustica#EchemeSpacing -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#EchemeSpacing">
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#EchemesPerEchemeSequence -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#EchemesPerEchemeSequence">
         <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
     </owl:Class>
     

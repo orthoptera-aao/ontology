@@ -1,0 +1,224 @@
+@prefix :        <http://vocab.acousti.ca/bioacoustica#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix terms:   <http://purl.org/dc/terms/> .
+@prefix oboInOwl:  <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix attributes:  <http://rs.tdwg.org/dwc/terms/attributes/> .
+@prefix terms1:  <http://rs.tdwg.org/dwc/terms/> .
+@prefix obo:     <http://purl.obolibrary.org/obo/> .
+
+:IsolatedSyllableRepetitionTime
+      a       owl:Class ;
+      rdfs:subClassOf :SongStructure .
+
+:SyllableDuration_InEcheme
+      a       owl:Class ;
+      rdfs:subClassOf :SongStructure .
+
+:SyllableDuration_IsolatedSyllable
+      a       owl:Class ;
+      rdfs:subClassOf :SongStructure .
+
+:hasPropagationMedium
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Restriction ;
+                owl:onProperty :hasPropagationMedium ;
+                owl:someValuesFrom :Call
+              ] ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+:CommunicationDistance
+      a       owl:Class ;
+      rdfs:comment "e.g. \"near-field\"" .
+
+:EchemeSequenceSpacing
+      a       owl:Class ;
+      rdfs:subClassOf :SongStructure .
+
+:HearingMechanism
+      a       owl:Class .
+
+:SoundPropagationMedium
+      a       owl:Class ;
+      rdfs:comment "The medium through which the sound is propagated (e.g. air, water, soil). Usually this can be a term from the Environment Ontology."@en .
+
+:EchemeDuration
+      a       owl:Class ;
+      rdfs:subClassOf :SongStructure .
+
+:EchemesPerEchemeSequence
+      a       owl:Class ;
+      rdfs:subClassOf :SongStructure .
+
+:HearingPeakSensitivity
+      a       owl:Class ;
+      rdfs:subClassOf :HearingMechanism .
+
+terms:description
+      a       owl:AnnotationProperty .
+
+terms:issued
+      a       owl:AnnotationProperty .
+
+:SoundProductionMethod
+      a       owl:Class ;
+      rdfs:comment "How the organism produces sound. The BioAcoustica SoundProduction ontology (http://vocab.acousti.ca/soundproduction) provides many common use cases."@en .
+
+:SyllablePeriod
+      a       owl:Class ;
+      rdfs:subClassOf :SongStructure .
+
+:AgressionCall
+      a       owl:Class ;
+      rdfs:subClassOf :Call .
+
+:TimeOfDay
+      a       owl:Class ;
+      rdfs:comment "What time of day is the call made?" .
+
+obo:IAO_0000115
+      a       owl:AnnotationProperty .
+
+terms:title
+      a       owl:AnnotationProperty .
+
+:SyllableSpacing
+      a       owl:Class ;
+      rdfs:subClassOf :SongStructure .
+
+:EchemePeriod
+      a       owl:Class ;
+      rdfs:subClassOf :SongStructure .
+
+:SyllableToothImpacts
+      a       owl:Class ;
+      rdfs:subClassOf :SongStructure .
+
+terms:replaces
+      a       owl:AnnotationProperty .
+
+terms:bibliographicCitation
+      a       owl:AnnotationProperty .
+
+terms:date
+      a       owl:AnnotationProperty .
+
+:TimeOfHighestAcousticActivity
+      a       owl:Class ;
+      rdfs:comment """e.g. 
+0900-1800
+Sunrise-1200
+Sunrise-sunset
+Sunrise-0900; 1800-sunset""" ;
+      rdfs:subClassOf :TimeOfDay .
+
+:SyllablesPerEcheme
+      a       owl:Class ;
+      rdfs:subClassOf :SongStructure .
+
+terms:publisher
+      a       owl:AnnotationProperty .
+
+:AlarmCall
+      a       owl:Class ;
+      rdfs:subClassOf :Call .
+
+:EchemeSequenceDuration
+      a       owl:Class ;
+      rdfs:subClassOf :SongStructure .
+
+:MaleFemaleDuet
+      a       owl:Class ;
+      rdfs:subClassOf :Call .
+
+:EchemeSpacing
+      a       owl:Class ;
+      rdfs:subClassOf :SongStructure .
+
+:FrequencySpectrum
+      a       owl:Class ;
+      rdfs:comment "in KHz" .
+
+terms:identifier
+      a       owl:AnnotationProperty .
+
+:EchemeSequencePeriod
+      a       owl:Class ;
+      rdfs:subClassOf :SongStructure .
+
+:PeakFrequency
+      a       owl:Class ;
+      rdfs:subClassOf :FrequencySpectrum .
+
+:FrequencySpectrumPeakEnergy
+      a       owl:Class ;
+      rdfs:subClassOf :FrequencySpectrum .
+
+:TerritorialCall
+      a       owl:Class ;
+      rdfs:subClassOf :Call .
+
+:hasCallType
+      a       owl:ObjectProperty ;
+      rdfs:range
+              [ a       owl:Restriction ;
+                owl:onProperty :hasCallType ;
+                owl:someValuesFrom :Call
+              ] ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+:AdvertismentCall
+      a       owl:Class ;
+      rdfs:subClassOf :Call .
+
+:hasProductionMethod
+      a       owl:TransitiveProperty , owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Restriction ;
+                owl:onProperty :hasProductionMethod ;
+                owl:someValuesFrom :Call
+              ] ;
+      rdfs:range
+              [ a       owl:Restriction ;
+                owl:onProperty :hasProductionMethod ;
+                owl:someValuesFrom :SoundProductionMethod
+              ] ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+terms:modified
+      a       owl:AnnotationProperty .
+
+:SyllableDuration_ClosingSyllable
+      a       owl:Class ;
+      rdfs:subClassOf :SyllableDuration_InEcheme .
+
+<http://vocab.acousti.ca/bioacoustica>
+      a       owl:Ontology ;
+      rdfs:comment """Ontology to describe the bioacoustic behaviours of animals.
+
+For practical reasons vibrational communication via a substrate is included."""@en ;
+      terms:title "BioAcoustica Ontology"@en .
+
+:HearingRange
+      a       owl:Class .
+
+:SongStructure
+      a       owl:Class .
+
+terms:hasVersion
+      a       owl:AnnotationProperty .
+
+:hasCallParticipants
+      a       owl:ObjectProperty ;
+      rdfs:domain
+              [ a       owl:Restriction ;
+                owl:onProperty :hasCallParticipants ;
+                owl:someValuesFrom :Call
+              ] ;
+      rdfs:subPropertyOf owl:topObjectProperty .
+
+:Call
+      a       owl:Class .

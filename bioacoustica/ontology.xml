@@ -1,0 +1,232 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:terms="http://purl.org/dc/terms/"
+    xmlns:terms1="http://rs.tdwg.org/dwc/terms/"
+    xmlns:obo="http://purl.obolibrary.org/obo/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+    xmlns="http://vocab.acousti.ca/bioacoustica#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:attributes="http://rs.tdwg.org/dwc/terms/attributes/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#IsolatedSyllableRepetitionTime">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#SyllableDuration_InEcheme">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#SyllableDuration_IsolatedSyllable">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#hasPropagationMedium">
+    <rdfs:domain rdf:nodeID="A0"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#CommunicationDistance">
+    <rdfs:comment>e.g. "near-field"</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#EchemeSequenceSpacing">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#HearingMechanism">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#SoundPropagationMedium">
+    <rdfs:comment xml:lang="en">The medium through which the sound is propagated (e.g. air, water, soil). Usually this can be a term from the Environment Ontology.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#EchemeDuration">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#EchemesPerEchemeSequence">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#HearingPeakSensitivity">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#HearingMechanism"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/description">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/issued">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#SoundProductionMethod">
+    <rdfs:comment xml:lang="en">How the organism produces sound. The BioAcoustica SoundProduction ontology (http://vocab.acousti.ca/soundproduction) provides many common use cases.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#SyllablePeriod">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
+    <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasCallParticipants"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#AgressionCall">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#TimeOfDay">
+    <rdfs:comment>What time of day is the call made?</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#SyllableSpacing">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#EchemePeriod">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#SyllableToothImpacts">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/replaces">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/bibliographicCitation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/date">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
+    <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasPropagationMedium"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#SoundProductionMethod"/>
+    <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasProductionMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#TimeOfHighestAcousticActivity">
+    <rdfs:comment>e.g. 
+0900-1800
+Sunrise-1200
+Sunrise-sunset
+Sunrise-0900; 1800-sunset</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#TimeOfDay"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#SyllablesPerEcheme">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/publisher">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
+    <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasCallType"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#AlarmCall">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#EchemeSequenceDuration">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#MaleFemaleDuet">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#EchemeSpacing">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#FrequencySpectrum">
+    <rdfs:comment>in KHz</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#EchemeSequencePeriod">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#PeakFrequency">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#FrequencySpectrum"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#FrequencySpectrumPeakEnergy">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#FrequencySpectrum"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#TerritorialCall">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#hasCallType">
+    <rdfs:range rdf:nodeID="A3"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#AdvertismentCall">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#hasProductionMethod">
+    <rdfs:range rdf:nodeID="A2"/>
+    <rdfs:domain rdf:nodeID="A4"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/modified">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#SyllableDuration_ClosingSyllable">
+    <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SyllableDuration_InEcheme"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica">
+    <terms:title xml:lang="en">BioAcoustica Ontology</terms:title>
+    <rdfs:comment xml:lang="en">Ontology to describe the bioacoustic behaviours of animals.
+
+For practical reasons vibrational communication via a substrate is included.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
+    <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasProductionMethod"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#HearingRange">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#SongStructure">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/dc/terms/hasVersion">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#hasCallParticipants">
+    <rdfs:domain rdf:nodeID="A1"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocab.acousti.ca/bioacoustica#Call">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+</rdf:RDF>
