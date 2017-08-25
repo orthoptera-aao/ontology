@@ -108,66 +108,56 @@ For practical reasons vibrational communication via a substrate is included.</rd
     
 
 
-    <!-- http://vocab.acousti.ca/bioacoustica#hasCallParticipants -->
+    <!-- http://vocab.acousti.ca/bioacoustica#hasPeakFrequency -->
 
-    <owl:ObjectProperty rdf:about="http://vocab.acousti.ca/bioacoustica#hasCallParticipants">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasCallParticipants"/>
-                <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
-            </owl:Restriction>
-        </rdfs:domain>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://vocab.acousti.ca/bioacoustica#hasCallType -->
-
-    <owl:ObjectProperty rdf:about="http://vocab.acousti.ca/bioacoustica#hasCallType">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <owl:ObjectProperty rdf:about="http://vocab.acousti.ca/bioacoustica#hasPeakFrequency">
+        <rdfs:domain rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
         <rdfs:range>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasCallType"/>
-                <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
+                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#Frequency"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#rational"/>
             </owl:Restriction>
         </rdfs:range>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://vocab.acousti.ca/bioacoustica#hasProductionMethod -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-    <owl:ObjectProperty rdf:about="http://vocab.acousti.ca/bioacoustica#hasProductionMethod">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasProductionMethod"/>
-                <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
-            </owl:Restriction>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasProductionMethod"/>
-                <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#SoundProductionMethod"/>
-            </owl:Restriction>
-        </rdfs:range>
-    </owl:ObjectProperty>
     
 
 
-    <!-- http://vocab.acousti.ca/bioacoustica#hasPropagationMedium -->
+    <!-- http://vocab.acousti.ca/bioacoustica#Frequency -->
 
-    <owl:ObjectProperty rdf:about="http://vocab.acousti.ca/bioacoustica#hasPropagationMedium">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://vocab.acousti.ca/bioacoustica#hasPropagationMedium"/>
-                <owl:someValuesFrom rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
-            </owl:Restriction>
-        </rdfs:domain>
-    </owl:ObjectProperty>
+    <owl:DatatypeProperty rdf:about="http://vocab.acousti.ca/bioacoustica#Frequency"/>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#Frequency_Power_Spectrum_50 -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.acousti.ca/bioacoustica#Frequency_Power_Spectrum_50">
+        <rdfs:subPropertyOf rdf:resource="http://vocab.acousti.ca/bioacoustica#Frequency"/>
+        <terms:description>The inter-quartile range (middle 50%) of the power spectrum. Expressed as &quot;Q1-Q3&quot;. A reference algorithm in R is provided. Units are kHz.</terms:description>
+        <terms:title></terms:title>
+        <terms:title>Frequency Power Spectrum (50%)</terms:title>
+        <rdfs:isDefinedBy>frequencySpectrumPowerQuartiles from https://github.com/orthoptera-aao/orthophonia/blob/master/R/frequencyPowerPercentile.R</rdfs:isDefinedBy>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#Peak_Frequency -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.acousti.ca/bioacoustica#Peak_Frequency">
+        <rdfs:subPropertyOf rdf:resource="http://vocab.acousti.ca/bioacoustica#Frequency"/>
+        <terms:description>The highest amplitude value of the frequency spectrum. In literature this may be given as a range (X-Y). For maximum compatability anticipate a single value or a range. Unit is kHz.</terms:description>
+        <terms:title>Peak Frequency</terms:title>
+    </owl:DatatypeProperty>
     
 
 
@@ -182,33 +172,15 @@ For practical reasons vibrational communication via a substrate is included.</rd
     
 
 
-    <!-- http://vocab.acousti.ca/bioacoustica#AdvertismentCall -->
-
-    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#AdvertismentCall">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vocab.acousti.ca/bioacoustica#AgressionCall -->
-
-    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#AgressionCall">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vocab.acousti.ca/bioacoustica#AlarmCall -->
-
-    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#AlarmCall">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
-    </owl:Class>
-    
-
-
     <!-- http://vocab.acousti.ca/bioacoustica#Call -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#Call"/>
+    
+
+
+    <!-- http://vocab.acousti.ca/bioacoustica#CallStructure -->
+
+    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#CallStructure"/>
     
 
 
@@ -223,7 +195,7 @@ For practical reasons vibrational communication via a substrate is included.</rd
     <!-- http://vocab.acousti.ca/bioacoustica#EchemeDuration -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#EchemeDuration">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#CallStructure"/>
     </owl:Class>
     
 
@@ -231,7 +203,7 @@ For practical reasons vibrational communication via a substrate is included.</rd
     <!-- http://vocab.acousti.ca/bioacoustica#EchemePeriod -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#EchemePeriod">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#CallStructure"/>
     </owl:Class>
     
 
@@ -239,7 +211,7 @@ For practical reasons vibrational communication via a substrate is included.</rd
     <!-- http://vocab.acousti.ca/bioacoustica#EchemeSequenceDuration -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#EchemeSequenceDuration">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#CallStructure"/>
     </owl:Class>
     
 
@@ -247,7 +219,7 @@ For practical reasons vibrational communication via a substrate is included.</rd
     <!-- http://vocab.acousti.ca/bioacoustica#EchemeSequencePeriod -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#EchemeSequencePeriod">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#CallStructure"/>
     </owl:Class>
     
 
@@ -255,7 +227,7 @@ For practical reasons vibrational communication via a substrate is included.</rd
     <!-- http://vocab.acousti.ca/bioacoustica#EchemeSequenceSpacing -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#EchemeSequenceSpacing">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#CallStructure"/>
     </owl:Class>
     
 
@@ -263,7 +235,7 @@ For practical reasons vibrational communication via a substrate is included.</rd
     <!-- http://vocab.acousti.ca/bioacoustica#EchemeSpacing -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#EchemeSpacing">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#CallStructure"/>
     </owl:Class>
     
 
@@ -271,23 +243,7 @@ For practical reasons vibrational communication via a substrate is included.</rd
     <!-- http://vocab.acousti.ca/bioacoustica#EchemesPerEchemeSequence -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#EchemesPerEchemeSequence">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vocab.acousti.ca/bioacoustica#FrequencySpectrum -->
-
-    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#FrequencySpectrum">
-        <rdfs:comment>in KHz</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://vocab.acousti.ca/bioacoustica#FrequencySpectrumPeakEnergy -->
-
-    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#FrequencySpectrumPeakEnergy">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#FrequencySpectrum"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#CallStructure"/>
     </owl:Class>
     
 
@@ -315,30 +271,8 @@ For practical reasons vibrational communication via a substrate is included.</rd
     <!-- http://vocab.acousti.ca/bioacoustica#IsolatedSyllableRepetitionTime -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#IsolatedSyllableRepetitionTime">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#CallStructure"/>
     </owl:Class>
-    
-
-
-    <!-- http://vocab.acousti.ca/bioacoustica#MaleFemaleDuet -->
-
-    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#MaleFemaleDuet">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vocab.acousti.ca/bioacoustica#PeakFrequency -->
-
-    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#PeakFrequency">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#FrequencySpectrum"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vocab.acousti.ca/bioacoustica#SongStructure -->
-
-    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
     
 
 
@@ -369,7 +303,7 @@ For practical reasons vibrational communication via a substrate is included.</rd
     <!-- http://vocab.acousti.ca/bioacoustica#SyllableDuration_InEcheme -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#SyllableDuration_InEcheme">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#CallStructure"/>
     </owl:Class>
     
 
@@ -377,7 +311,7 @@ For practical reasons vibrational communication via a substrate is included.</rd
     <!-- http://vocab.acousti.ca/bioacoustica#SyllableDuration_IsolatedSyllable -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#SyllableDuration_IsolatedSyllable">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#CallStructure"/>
     </owl:Class>
     
 
@@ -385,7 +319,7 @@ For practical reasons vibrational communication via a substrate is included.</rd
     <!-- http://vocab.acousti.ca/bioacoustica#SyllablePeriod -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#SyllablePeriod">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#CallStructure"/>
     </owl:Class>
     
 
@@ -393,7 +327,7 @@ For practical reasons vibrational communication via a substrate is included.</rd
     <!-- http://vocab.acousti.ca/bioacoustica#SyllableSpacing -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#SyllableSpacing">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#CallStructure"/>
     </owl:Class>
     
 
@@ -401,7 +335,7 @@ For practical reasons vibrational communication via a substrate is included.</rd
     <!-- http://vocab.acousti.ca/bioacoustica#SyllableToothImpacts -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#SyllableToothImpacts">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#CallStructure"/>
     </owl:Class>
     
 
@@ -409,15 +343,7 @@ For practical reasons vibrational communication via a substrate is included.</rd
     <!-- http://vocab.acousti.ca/bioacoustica#SyllablesPerEcheme -->
 
     <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#SyllablesPerEcheme">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#SongStructure"/>
-    </owl:Class>
-    
-
-
-    <!-- http://vocab.acousti.ca/bioacoustica#TerritorialCall -->
-
-    <owl:Class rdf:about="http://vocab.acousti.ca/bioacoustica#TerritorialCall">
-        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#Call"/>
+        <rdfs:subClassOf rdf:resource="http://vocab.acousti.ca/bioacoustica#CallStructure"/>
     </owl:Class>
     
 
